@@ -1,7 +1,7 @@
 data "aws_iam_policy_document" "bucketPolicy" {
     version = "2012-10-17"
 
-    statement = {
+    statement {
         sid = "PublicReadGetObject"
         effect = "Allow"
 
