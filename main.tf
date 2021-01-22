@@ -10,3 +10,22 @@ terraform {
 provider "aws" {
   region = var.aws_region
 }
+
+resource "aws_resource_group" "allResources" {
+  name = "all-resources"
+
+  resource_query {
+    query = <<JSON
+{
+  "ResourceTypeFilters": [
+    "*"
+  ],
+  "TagFilters": [
+    {
+      "Key": "all"
+    }
+  ]
+}
+JSON
+  }
+}
