@@ -7,7 +7,9 @@ data "aws_iam_policy_document" "bucketPolicy" {
 
         principals {
             type = "AWS"
-            identifiers = "*"
+            identifiers = [
+                "*"
+            ]
         }
 
         actions = [
