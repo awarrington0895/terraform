@@ -31,5 +31,5 @@ JSON
 }
 
 module "nx-playground" {
-    source = "./nx-playground"
+    source = "./modules/nx-playground"
 }
