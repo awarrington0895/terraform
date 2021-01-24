@@ -29,3 +29,7 @@ resource "aws_resourcegroups_group" "allResources" {
 JSON
   }
 }
+
+module "nx-playground" {
+    source = "./nx-playground"
+}
