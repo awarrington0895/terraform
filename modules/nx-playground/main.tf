@@ -51,7 +51,7 @@ data "aws_iam_policy_document" "gitlab-user-policy" {
 }
 
 module "hosting_bucket" {
-    source = "../modules/aws-s3-static-website-bucket"
+    source = "./aws-s3-static-website-bucket"
 
     bucket_name = "asw-react-test-app"
 
