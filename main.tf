@@ -29,7 +29,3 @@ resource "aws_resourcegroups_group" "allResources" {
 JSON
   }
 }
-
-module "elm_app" {
-  source = "./modules/elm-todo-app"
-}
