@@ -29,3 +29,11 @@ resource "aws_resourcegroups_group" "allResources" {
 JSON
   }
 }
+
+module "hosting_bucket" {
+    source = "./modules/aws-s3-static-website-bucket"
+
+    bucket_name = "asw-elm-todo-app"
+
+    tags = local.tags
+}
