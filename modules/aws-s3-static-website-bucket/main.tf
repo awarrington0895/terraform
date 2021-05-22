@@ -25,6 +25,8 @@ data "aws_iam_policy_document" "bucketPolicy" {
 resource "aws_s3_bucket" "s3_bucket" {
     bucket = var.bucket_name
 
+    force_destroy = true
+
     acl = "public-read"
     policy = data.aws_iam_policy_document.bucketPolicy.json
 
