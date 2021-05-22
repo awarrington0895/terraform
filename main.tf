@@ -35,5 +35,8 @@ module "hosting_bucket" {
 
     bucket_name = "asw-elm-todo-app"
 
-    tags = local.tags
+    tags = {
+      all = "",
+      project = "elm-todo-app"
+    }
 }
